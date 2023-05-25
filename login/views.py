@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login
+from .forms import Tareas_formulario
 
 # Create your views here.
 
@@ -32,7 +33,10 @@ def entrar (request):
             })
     
 def tareas (request):
-    return render(request,"tareas.html")
+    return render(request,"tareas/tareas.html",{
+        "form":Tareas_formulario
+        
+        })
 
 
             
