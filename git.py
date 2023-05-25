@@ -26,7 +26,11 @@ def push_to_github(commit_message, repository_url, branch='master'):
 
     # Agrega un remote con la URL especificada
     os.system(f'git remote add origin {repository_url}')
-    print("para ver los remote que estan activos\ git push -u origin\nSi deseas cambiar la URL del remote origin, puedes hacerlo ejecutando el siguiente comando: \ngit remote set-url origin https://github.com/leonardohurtadortk/login.git")
+    print("""para ver los remote que estan activos\n
+    git remote -v
+    \nSi deseas cambiar la URL del remote origin, puedes hacerlo ejecutando el siguiente comando: \n
+    git remote set-url origin https://github.com/leonardohurtadortk/login.git
+    """)
 
     # Hace push de los cambios al repositorio remoto en la rama especificada
     os.system(f'git push -u origin {branch}')
